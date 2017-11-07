@@ -1,7 +1,9 @@
 ## EMEA PUG Challenge: Programmer's Challenge
 
 We have a server that plays games – specifically Othello (aka Reversi) - and it's bored and lonely.
+
 You write some ABL code that plays Othello by talking to the server using a specific API we provide. During the PUG Challenge, players play games against each other in a tournament that consists of a knockout competition. Preliminary rounds will take place during the PUG Challenge and the final match will take place during a session on Friday at 3pm.
+
 On top of your peers’ recognition, prizes will be offered by Riverside Software
 
 ### The Competition
@@ -62,56 +64,58 @@ The purpose of the game is to have a majority of the disks on the board once all
 
 There are 4 disks on board at the start of the game: 2 white (light) and 2 black (dark) . The first move always belongs to dark/black.
 
-### Initial position
+[[img001.png]]
 
 ### Legal moves
 
 Each move adds 1 disc to the board. By last move added disc and other same colors discs added before, should flank at least one opponent discs on vertical, horizontal or diagonal direction (between your discs one or more opponent discs appear). For example possible legal moves from starting position for dark (marked by red)
 
-Legal move 1
+[[img002.png]]
 
 All discs flanked by last move change their color. For example from start position dark chooses to move to Row 2 Col 4 (2;4). In that case the light disc placed on (3;4) becomes dark:
 
-Dark move
+[[img003.png]]
 
 Now it is light's turn and their legal moves are following:
 
-Light Move 
+[[img004.png]]
 
 And so on.
 
-Pass situation
+### Pass situation
 
 During game situation when one of opponents have no legal moves can appear. In that case a player must skip their move and opponent get possibility to move. In following situation light has no legal moves so they need to pass and dark are continues
 
-Light pass
+[[img005.png]]
 
-End of game
+### End of game
 
 Game is ongoing until board full or both opponents have no legal moves. Following picture represent board state with no legal moves for both opponents.
 
-Game over
+[[img006.png]]
 
 The player that has the most disks on the board wins. In previous picture light wins since light has 27 disks and dark has 22.
 
-Game hints
+### Game hints
 
-Remember that the goal is to have the most disks at when there are no more legal moves for either player
-A move which flips many of opponent disks is not necessarily a good one
-Taking the corner is a good move in general, since a disk in the corner can't be flipped (overtaken by opponent), but game target is not take all corners but have majority on the board
-It is possible to flip disks in as many as 8 directions at once (calculate precisely)
-There are plenty of strategies available online for playing Othello/Reversi
-Scoring
+* Remember that the goal is to have the most disks at when there are no more legal moves for either player
+* A move which flips many of opponent disks is not necessarily a good one
+* Taking the corner is a good move in general, since a disk in the corner can't be flipped (overtaken by opponent), but game target is not take all corners but have majority on the board
+* It is possible to flip disks in as many as 8 directions at once (calculate precisely)
+* There are plenty of strategies available online for playing Othello/Reversi
+
+## Scoring
+
 Points are cumulative during the competition.
 
-Points	Rule
-+3	Three points for a win
-+1	Bonus point for a whitewash (ie if opponent left without disks on board)
-+1	One point for a draw (for each opponent)
-+0	Zero points for a loss or technical loss
--1	One point deducted for a restart
-"Disk difference" will be measured and only used as a tie-breaker (if two or more players have the same number of points)
+|| Points || Rule ||
+|| +3 || Three points for a win ||
+|| +1 || Bonus point for a whitewash (ie if opponent left without disks on board) ||
+|| +1 || One point for a draw (for each opponent) ||
+|| +0 || Zero points for a loss or technical loss ||
+|| -1 || One point deducted for a restart ||
 
-The player with the biggest differential wins
-If two players have the same differentials, the highest "for" disks wins
-If there are still tied players, the winner will be determined by a best-of-three game of Rock-Paper-Scissors (or something similarly inane)
+"Disk difference" will be measured and only used as a tie-breaker (if two or more players have the same number of points)
+1. The player with the biggest differential wins
+2. If two players have the same differentials, the highest "for" disks wins
+3. If there are still tied players, the winner will be determined by a best-of-three game of Rock-Paper-Scissors (or something similarly inane)
