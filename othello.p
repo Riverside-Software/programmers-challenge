@@ -50,6 +50,20 @@ catch e as Progress.Lang.Error :
     view-as alert-box.
 end catch.
 
+procedure CalculateMove:
+    define input  parameter piPlayerIndex as integer no-undo.
+    define input  parameter poBoardState as JsonObject no-undo.
+    define output parameter piRow as integer no-undo.
+    define output parameter piCol as integer no-undo.
+    
+    // TODO YOUR BRAINZ HERE
+    
+    /* The ROW and COLUMN values returned here are expected to be 1-based
+       IOW ABL format (not 0-based). 
+       
+       returning 0 and 0 indicate 'PASS'   */
+end procedure.
+
 /* ******************** Internal proc and function******************** */       
 function GetAuthCode returns character (input authString as character):
     define variable utf8String as character no-undo.
@@ -336,21 +350,7 @@ procedure GetPlayerView:
            piPlayerIndex = respData:GetInteger('Index':u)
            .
 end procedure.    
-
-procedure CalculateMove:
-    define input  parameter piPlayerIndex as integer no-undo.
-    define input  parameter poBoardState as JsonObject no-undo.
-    define output parameter piRow as integer no-undo.
-    define output parameter piCol as integer no-undo.
-    
-    // TODO YOUR BRAINZ HERE
-    
-    /* The ROW and COLUMN values returned here are expected to be 1-based
-       IOW ABL format (not 0-based). 
-       
-       returning 0 anmd 0 indicate 'PASS'   */
-end procedure.
-    
+   
 procedure PerformMove: 
     define input-output parameter poAuth as JsonObject no-undo.
     define input        parameter piPlayerId as integer no-undo.
