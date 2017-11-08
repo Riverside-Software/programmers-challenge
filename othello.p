@@ -35,11 +35,11 @@ define variable playerName as character   no-undo.
 
 /* ***************************  Main Block  *************************** */
 assign httpClient = ClientBuilder:Build():Client
-       hostURI    = URI:Parse('http://34.201.103.0:8080/ClientService.svc/json/':u)
+       hostURI    = URI:Parse('http://52.58.51.10:8080/ClientService.svc/json/':u)
        
-       teamName   = ''
-       teamSecret = ''
-       playerName = ''
+       teamName   = '' /* TODO */
+       teamSecret = '' /* TODO */
+       playerName = '' /* TODO or use SESSION:PARAMETER */
        .
 
 run MainLoop.
@@ -343,7 +343,7 @@ procedure CalculateMove:
     define output parameter piRow as integer no-undo.
     define output parameter piCol as integer no-undo.
     
-    // YOUR BRAINZ HERE
+    // TODO YOUR BRAINZ HERE
     
     /* The ROW and COLUMN values returned here are expected to be 1-based
        IOW ABL format (not 0-based). 
